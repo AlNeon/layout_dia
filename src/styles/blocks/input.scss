@@ -1,0 +1,22 @@
+.input {
+  border: none;
+  outline: none;
+  box-shadow: none;
+  width: 100%;
+
+  background-color: $header-footer-bg-color;
+  color: $header-menu-text-color;
+  opacity: 70%;
+
+  height: 41px;
+  font-family: $main-font-family;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 22.5px;
+  border-bottom: 1px solid $secondary-bg-color;
+  transition: $std-transition;
+
+  &:focus {
+    border-bottom: 2px solid $highlight-footer-color;
+  }
+}
