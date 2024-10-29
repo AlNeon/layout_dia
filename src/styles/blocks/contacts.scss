@@ -36,6 +36,8 @@
     line-height: 36px;
     text-decoration: none;
     color: $header-menu-text-color;
+
+    @include hover(color, $highlight-color);
   }
 
   &__our-socials--content {

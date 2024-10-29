@@ -1,5 +1,4 @@
 .header {
-  position: relative;
   height: 893px;
   background-color: $header-footer-bg-color;
   color: $header-menu-text-color;
@@ -50,7 +49,7 @@
       grid-column: span 6;
     }
 
-    @include on-desktop {
+    @include on-the-design {
       grid-column: span 7;
     }
 
@@ -120,14 +119,28 @@
     }
   }
 
-  &__bottom {
+  &__image {
+    position: absolute;
+    right: 0;
+    bottom: 0;
     height: 390px;
-    background-image: url(../images/header_bg_small.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    width: 100%;
+    object-fit: cover;
     border-radius: 30px;
+    opacity: 0;
+    transition: $std-transition;
 
+    @include on-small-desktop {
+      height: 680px;
+    }
+  }
+
+  &__image--active {
+    opacity: 1;
+  }
+
+  &__bottom {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -143,7 +156,7 @@
       padding-left: 78px;
     }
 
-    @include on-desktop {
+    @include on-the-design {
       grid-column: span 5;
       padding-left: 48px;
     }
@@ -152,6 +165,7 @@
       display: flex;
       gap: 16px;
       margin-bottom: 16px;
+      z-index: 1;
 
       @include on-small-desktop {
         margin-right: 24px;
@@ -162,6 +176,7 @@
 
     &--info {
       max-width: 280px;
+      z-index: 1;
 
       @include on-small-desktop {
         align-self: flex-end;

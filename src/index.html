@@ -34,6 +34,10 @@
       rel="stylesheet"
       href="./styles/main.scss"
     />
+    <script
+      src="./scripts/main.js"
+      defer
+    ></script>
   </head>
   <!-- #endregion -->
   <body class="page__body">
@@ -94,12 +98,13 @@
           </nav>
         </div>
         <a
-          href="tel:654 321 987"
+          href="#contact-us"
           class="top-bar__right"
         >
           Hire us
         </a>
       </div>
+
       <div class="header__content">
         <div class="header__top">
           <h1 class="header__top--title">Strategic Agency</h1>
@@ -108,21 +113,38 @@
             challenges.
           </p>
           <a
-            href="#about-us"
+            href="#work"
             class="header__top--button"
           >
             Learn more
           </a>
         </div>
         <div class="header__bottom">
+          <div class="header__images">
+            <img
+              src="./images/slider/slider_bg_1.png"
+              class="header__image header__image--active"
+              alt="slider image 1"
+            />
+            <img
+              src="./images/slider/slider_bg_2.png"
+              class="header__image"
+              alt="slider image 2"
+            />
+            <img
+              src="./images/slider/slider_bg_3.png"
+              class="header__image"
+              alt="slider image 3"
+            />
+          </div>
           <div class="header__bottom--arrows">
             <a
-              href="#"
               class="arrow arrow-left"
+              id="leftArrow"
             ></a>
             <a
-              href="#"
               class="arrow arrow-right"
+              id="rightArrow"
             ></a>
           </div>
           <div class="header__bottom--info">
@@ -304,6 +326,7 @@
             components are united.
           </p>
         </div>
+
         <article class="services__card card">
           <h3 class="card__number">001</h3>
           <p class="card__content">
@@ -316,13 +339,14 @@
             Packaging
           </p>
           <a
-            href="#"
+            href="#work"
             class="card__link learn-more"
           >
             <div class="learn-more__icon"></div>
             <p class="learn-more__text">Learn more</p>
           </a>
         </article>
+
         <article class="services__card card">
           <h3 class="card__number">002</h3>
           <p class="card__content">
@@ -335,13 +359,14 @@
             Post Production
           </p>
           <a
-            href="#"
+            href="#work"
             class="card__link learn-more"
           >
             <div class="learn-more__icon"></div>
             <p class="learn-more__text">Learn more</p>
           </a>
         </article>
+
         <article class="services__card card">
           <h3 class="card__number">003</h3>
           <p class="card__content">
@@ -354,13 +379,14 @@
             Blog Content & SEO
           </p>
           <a
-            href="#"
+            href="#work"
             class="card__link learn-more"
           >
             <div class="learn-more__icon"></div>
             <p class="learn-more__text">Learn more</p>
           </a>
         </article>
+
         <article class="services__card card">
           <h3 class="card__number">004</h3>
           <p class="card__content">
@@ -373,7 +399,7 @@
             Strategic Partnerships
           </p>
           <a
-            href="#"
+            href="#work"
             class="card__link learn-more"
           >
             <div class="learn-more__icon"></div>
@@ -409,6 +435,7 @@
               <p class="user__info--source">Teach for America</p>
             </div>
           </div>
+
           <div class="testimonials__user user">
             <div class="user__avatar">
               <div class="user__avatar--image"></div>
@@ -425,6 +452,7 @@
               <p class="user__info--source">Hawkins Consulting</p>
             </div>
           </div>
+
           <div class="testimonials__user user">
             <div class="user__avatar">
               <div class="user__avatar--image"></div>
@@ -478,7 +506,7 @@
             action="https://mate-academy-form-lesson.herokuapp.com/create-application"
             method="POST"
             class="contact-us__form form"
-            onsubmit="this.reset(); return false;"
+            onsubmit="this.reset(); window.scrollTo({ top: 0, behavior: 'smooth' }); return false;"
           >
             <label for="email">
               <input
@@ -501,14 +529,14 @@
               />
             </label>
             <label for="message">
-              <input
+              <textarea
                 class="form__message input"
-                type="text"
                 name="message"
                 id="message"
                 placeholder="Your message"
+                rows="3"
                 required
-              />
+              ></textarea>
             </label>
             <button
               type="submit"
@@ -518,6 +546,7 @@
             </button>
           </form>
         </article>
+
         <article class="contact-us__contacts">
           <h2
             class="contact-us__title section-title section-title--align--left section-title--medium-text section-title--medium-indent"
@@ -580,6 +609,7 @@
           alt="Air logo"
         />
       </a>
+
       <nav class="nav-bottom">
         <ul class="nav-bottom__list">
           <li class="nav-bottom__item">
