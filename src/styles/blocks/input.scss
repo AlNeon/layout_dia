@@ -17,6 +17,15 @@
   transition: $std-transition;
 
   &:focus {
-    border-bottom: 2px solid $highlight-footer-color;
+    border-bottom: 1px solid $highlight-footer-color;
+  }
+
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus {
+    -webkit-text-fill-color: $header-menu-text-color;
+    background-color: $header-footer-bg-color !important;
+    border: none !important;
+    box-shadow: none !important;
   }
 }
